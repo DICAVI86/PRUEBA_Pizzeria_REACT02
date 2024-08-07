@@ -19,10 +19,10 @@ export const PizzaProvider = ({children}) =>{
 
     const agregarAlCarrito = ({id, price, name, img})=> {
         const productoPorIndex = carrito.findIndex((p)=> p.id === id);
-        const producto = {id, price, name, img, cantidad:1};
+        const producto = {id, price, name, img, count:1};
 
         if (productoPorIndex >= 0) {
-            carrito[productoPorIndex].cantidad++;
+            carrito[productoPorIndex].count++;
             setCarrito([...carrito])
         } else {
             producto.cantidad = 1
@@ -33,15 +33,15 @@ export const PizzaProvider = ({children}) =>{
     const eliminarDelCarrito = (i) => {
         const index = carrito.findIndex((orden) => orden.id === i.id);
         if (index >= 0) {
-          if (carrito[index].cantidad > 1) {
-            carrito[index].cantidad--;
+          if (carrito[index].count > 1) {
+            carrito[index].count--;
             setCarrito([...carrito]);
           } else {
             const nuevoCarrito = carrito.filter((item) => item.id != i.id);
             setCarrito(nuevoCarrito);
           }
         } else {
-          console.log("Borrado");
+          console.log("Eliminado");
         }
       };
 

@@ -10,12 +10,12 @@ function Carrito() {
         useContext(PizzasContext);
 
     const precioTotal = carrito.reduce(
-        (total, pizza)=> total + pizza.price * pizza.contador,
+        (total, pizza)=> total + pizza.price * pizza.count,
         0
     );
 
     const precioUnaPizza = carrito.reduce(
-        (total, pizza) => pizza.price * pizza.contador,
+        (total, pizza) => pizza.price * pizza.count,
         0
       );
 
@@ -39,7 +39,7 @@ function Carrito() {
                       <InputGroup className="text-end">
                         <Button
                           variant="danger"
-                          onClick={() => sacarDelCarrito(item)}
+                          onClick={() => eliminarDelCarrito(item)}
                         >
                           -
                         </Button>

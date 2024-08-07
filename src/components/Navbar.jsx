@@ -8,8 +8,8 @@ function NavbarMamma() {
 
     const {carrito} = useContext(PizzasContext);
 
-    const totalAPagar = carrito.reduce(
-        (total, pizza) => total + pizza.price * pizza.contador,
+    const precioTotal = carrito.reduce(
+        (total, pizza) => total + pizza.price * pizza.count,
         0
       );
 
@@ -26,7 +26,7 @@ function NavbarMamma() {
                 <Navbar.Brand>🍕 Pizzeria Mamma Mia!</Navbar.Brand>
                 <Nav>
                     <Nav.Link as={NavLink} to={"/"}>🏠 Home</Nav.Link>
-                    <Nav.Link as={NavLink} to={"/carrito"}>🛒 Carro: $ {totalAPagar.toLocaleString()}</Nav.Link>
+                    <Nav.Link as={NavLink} to={"/carrito"}>🛒 Carro: $ {precioTotal.toLocaleString()}</Nav.Link>
                 </Nav>
             </Container>
 

@@ -20,7 +20,7 @@ function CardPizza() {
             <Card.Text>
               Ingredientes:
             </Card.Text> 
-            <ul variant="flush">
+            <ul variant="list">
                 {pizza.ingredients.map((ingredient, i) => (
                   <li key={i}> {ingredient}</li>
                 ))}
@@ -28,22 +28,23 @@ function CardPizza() {
         </Card.Body>
             
         <Card.Footer className="py-4 text-center ">
-        <h3 className="fw-bolder pb-2">$ {pizza.price.toLocaleString()}</h3>
-            <Button
-            className="m-1 btn"
-            variant="primary"
-            onClick={() => navigate(`/pizzas/${pizza.id}`)}
-            >
-            Ver Más
-            </Button>
-            <Button
-            className="m-1 btn"
-            variant="danger"
-            onClick={() => agregarAlCarrito(pizza)}
-            >
-            Añadir
-            </Button>
-    </Card.Footer>
+        <h3 className="fw-bolder pb-3">$ {pizza.price.toLocaleString()}</h3>
+                <Button
+                className="m-3 btn"
+                variant="primary"
+                onClick={() => navigate(`/pizzas/${pizza.id}`)}
+                >
+                Ver Más
+                </Button>
+
+                <Button
+                className="m-3 btn"
+                variant="danger"
+                onClick={() => agregarAlCarrito(pizza)}
+                >
+                Añadir
+                </Button>
+            </Card.Footer>
             
           
         </Card>
