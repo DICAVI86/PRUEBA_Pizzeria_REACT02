@@ -22,14 +22,14 @@ function Carrito() {
 
       return (
         <>
-          <Container>
+          <Container className='mt-5'>
             <h5>Detalles del Pedido:</h5>
             <ListGroup variant="flush">
               {carrito.map((item, i) => (
                 <ListGroup.Item key={i} className="pt-2">
                   <Row>
                     <Col md={1}>
-                      <img src={item.img} alt={item.name} className="img-fluid" />
+                      <img src={item.img} alt={item.name} className="img-fluid" roundedCircle="true"/>
                     </Col>
                     <Col md={9} className="precioCarrito">
                       <h5 className="text-capitalize">{item.name}</h5>

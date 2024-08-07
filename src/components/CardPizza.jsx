@@ -9,11 +9,11 @@ function CardPizza() {
     const navigate = useNavigate();
 
   return (
-    <Container>
+    <Container className='mt-5'>
     <Row className='pt-3'>
     {pizzas.map((pizza, index)=>(
         <Col className='p-3' key={index}>
-        <Card key={pizza.id} style={{ width: '18rem' }}>
+        <Card key={pizza.id} style={{ width: '18rem' }} className='shadow rounded'>
           <Card.Img variant="top" src={pizza.img}/>
         <Card.Body>
             <Card.Title className='fw-bolder'>{pizza.name}</Card.Title>

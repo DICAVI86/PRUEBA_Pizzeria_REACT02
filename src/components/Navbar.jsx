@@ -18,12 +18,12 @@ function NavbarMamma() {
   return (
         <Navbar
         bg="info"
-        variant="primary"
+        variant="secondary"
         expand="lg"
-        className="ps-5 pe-5 fixed-top"
+        className="navbar ps-5 pe-5 fixed-top"
         >
             <Container>
-                <Navbar.Brand>🍕 Pizzeria Mamma Mia!</Navbar.Brand>
+                <Navbar.Brand className='fs-3'>🍕 Pizzeria Mamma Mia!</Navbar.Brand>
                 <Nav>
                     <Nav.Link as={NavLink} to={"/"}>🏠 Home</Nav.Link>
                     <Nav.Link as={NavLink} to={"/carrito"}>🛒 Carro: $ {precioTotal.toLocaleString()}</Nav.Link>

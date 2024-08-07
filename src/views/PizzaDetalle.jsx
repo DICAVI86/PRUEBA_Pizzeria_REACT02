@@ -13,7 +13,7 @@ function PizzaDetalle() {
     const pizza = pizzas[pizzas.findIndex((pizzas) => pizzas.id === id)];
 
   return (
-    <Card className="p-5">
+    <Card className="p-5 mt-5">
       <Row className="g-0">
         <Col md={5} className="p-3">
           <Card.Img src={pizza.img} />
